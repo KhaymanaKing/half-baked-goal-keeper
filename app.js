@@ -23,8 +23,8 @@ let score1 = 0;
 let score2 = 0;
 
 nameFormButton.addEventListener('click', () => {
-    const teamOne = teamOneLabel.value;
-    const teamTwo = teamTwoLabel.value;
+    const teamOne = teamOneInput.value;
+    const teamTwo = teamTwoInput.value;
     // set the state to this data from the form
     name1 = teamOne;
     name2 = teamTwo;
@@ -33,7 +33,7 @@ nameFormButton.addEventListener('click', () => {
     score2 = 0;
     // refresh the current game element with new data by calling the appropriate function
     refreshCurrentGameEl();
-    console.log(name1, name2);
+    console.log(teamOne, teamTwo);
 });
 
 
@@ -73,7 +73,7 @@ finishGameButton.addEventListener('click', () => {
     pastGames.push(currentGame);
     // it will be helpful to keep track of these games as objects with 4 properties, one for each piece of state we're tracking
     // for example, make an object like this: { name1: 'ducks', name2: 'bears' ,score1: 1, score2: 2 } 
-    const currentGame = [{name1: name1, name2: name2, score1: score1, score2: score2}]
+    const currentGame =  {name1: name1, name2: name2, score1: score1, score2: score2};
     // then push it to your array in state
     // (be sure to make a new object. do not declare the object in global scope and mutate it for reuse. This would cause difficult bugs)
     
