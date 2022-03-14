@@ -21,12 +21,13 @@ let score2 = 0;
 
 nameFormButton.addEventListener('click', (e) => {
     // get the name data from the form
-
+    let name1 = (teamOne)
     // set the state to this data from the form
-
+    
     // reset the form values
 
     // refresh the current game element with new data by calling the appropriate function
+    
 });
 
 
@@ -34,7 +35,7 @@ teamOneAddButton.addEventListener('click', () => {
     // increment the current state for team one's score
     score1++;
     // refresh the current game element with new data by calling the appropriate function
-    function refreshCurrentGameEl() 
+    refreshCurrentGameEl(); 
 
 });
 
@@ -42,7 +43,7 @@ teamTwoAddButton.addEventListener('click', () => {
     // increment the current state for team two's score
     score2++;
     // refresh the current game element with new data by calling the appropriate function
-    function refreshCurrentGameEl() {
+    refreshCurrentGameEl(); 
 
 });
 
@@ -50,7 +51,7 @@ teamOneSubtractButton.addEventListener('click', () => {
     // decrement the current state for team one's score
     score1--;
     // refresh the current game element with new data by calling the appropriate function
-    function refreshCurrentGameEl() 
+    refreshCurrentGameEl(); 
 
 });
 
@@ -58,7 +59,7 @@ teamTwoSubtractButton.addEventListener('click', () => {
     // decrement the current state for team two's score
     score2--;
     // refresh the current game element with new data by calling the appropriate function
-    function refreshCurrentGameEl()
+    refreshCurrentGameEl();
 });
 
 finishGameButton.addEventListener('click', () => {
@@ -82,8 +83,9 @@ function refreshCurrentGameEl() {
     teamOneLabel.textContent = name1;
     teamTwoLabel.textContent = name2;
 
-    const gameEl = renderGame(currentGame)
-    // make a new gameEl here by calling renderGame with the approriate arguments. 
+    const gameEl = renderGame(currentGame);
+    // make a new gameEl here by calling renderGame with the appropriate arguments. 
+    renderGame(pastGamesEl);
     // Check the renderGame function declaration in render-utils.js to figure out the correct arguments to pass to this function 
     // In render-utils.js as yourself: How many arguments does the function take? What order does it take them in?
     
