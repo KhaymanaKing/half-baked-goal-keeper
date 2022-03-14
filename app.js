@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { renderGame, renderTeam } from './render-utils.js';
+import { renderGame } from './render-utils.js';
 const currentGameEl = document.getElementById('current-game-container');
 const pastGamesEl = document.getElementById('past-games-container');
 
@@ -75,12 +75,10 @@ finishGameButton.addEventListener('click', () => {
         name2: name2, 
         score1: score1, 
         score2: score2 };
-    pastGames.push(currentGame);
     // it will be helpful to keep track of these games as objects with 4 properties, one for each piece of state we're tracking
     // for example, make an object like this: { name1: 'ducks', name2: 'bears' ,score1: 1, score2: 2 } 
-    console.log(currentGame);
     // then push it to your array in state
-    
+    pastGames.push(currentGame);
     // (be sure to make a new object. do not declare the object in global scope and mutate it for reuse. This would cause difficult bugs)
     displayAllGames();
     // reset the state to zero and empty strings
