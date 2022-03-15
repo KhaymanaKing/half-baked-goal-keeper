@@ -21,6 +21,13 @@ let name2 = '';
 let score1 = 0;
 let score2 = 0;
 
+teamOneInput.addEventListener('click', () => {
+    teamOneInput.value = '';
+});
+
+teamTwoInput.addEventListener('click', () => {
+    teamTwoInput.value = '';
+});
 
 nameFormButton.addEventListener('click', () => {
     const teamOne = teamOneInput.value;
@@ -93,10 +100,8 @@ finishGameButton.addEventListener('click', () => {
 
 function refreshCurrentGameEl() {
     currentGameEl.textContent = '';
-
     teamOneLabel.textContent = name1;
     teamTwoLabel.textContent = name2;
-
     const gameEl = renderGame(name1, name2, score1, score2);
     // make a new gameEl here by calling renderGame with the appropriate arguments. 
     renderGame(pastGamesEl);
@@ -119,4 +124,6 @@ function displayAllGames() {
     // use the renderGame function to render and append a past game for each past game in state
     renderGame();
     // again, review the renderGame function in render-utils.js. How many arguments does it take? What order does it take them in?
+    teamOneInput.value = '';
+    teamTwoInput.value = '';
 }
